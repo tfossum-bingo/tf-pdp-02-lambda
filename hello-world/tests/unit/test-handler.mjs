@@ -15,6 +15,6 @@ describe('Tests index', function () {
         let response = JSON.parse(result.body);
 
         expect(response).to.be.an('object');
-        expect(response.message).to.be.equal("You star, you. You rule the world!");
+        expect(response.message).to.be.equal("You are my sunshine. You rule the world!");
     });
 });
