@@ -3,12 +3,13 @@ name: Node.js CI
 on:
   pull_request:
 
+env:
+  APP_ENV_NAME: Development
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      APP_ENV_NAME: Development
 
     strategy:
       matrix:
