@@ -3,8 +3,8 @@ name: Node.js CI
 on:
   pull_request:
 
-env:
-  APP_ENV_NAME: Development
+#env:
+#  APP_ENV_NAME: Development
 
 jobs:
   build:
