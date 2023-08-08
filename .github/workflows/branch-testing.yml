@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: print environment variable
-        run: echo "My APP_ENV_NAME $APP_ENV_NAME"
+        run: echo "My APP_ENV_NAME ${{ vars.APP_ENV_NAME }}"
       - name: create env file
         run: |
           touch .env
