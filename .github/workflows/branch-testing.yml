@@ -4,7 +4,7 @@ on:
   pull_request:
 
 env:
-  APP_ENV_NAME: Development
+  APP_ENV_NAME: ${{ process.env.APP_ENV_NAME }}
 
 jobs:
   build:
