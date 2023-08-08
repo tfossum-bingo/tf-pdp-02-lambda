@@ -21,11 +21,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install dependencies
-        working-directory: hello-world
+        working-directory: app
         run: npm ci
       - name: build project
-        working-directory: hello-world
+        working-directory: app
         run: npm run build --if-present
       - name: Run tests
-        working-directory: hello-world
+        working-directory: app
         run: npm test
