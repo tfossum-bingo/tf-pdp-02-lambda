@@ -19,9 +19,6 @@ Resources:
       Runtime: nodejs18.x
       Architectures:
         - x86_64
-      Environment:
-        Variables:
-          APP_ENV_NAME: '{{resolve:secretsmanager:tf-app-env-name}}'
       Role: arn:aws:iam::594516819925:role/tf-pdp-01-role
       Events:
         HelloWorld:
