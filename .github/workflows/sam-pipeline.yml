@@ -12,6 +12,15 @@ jobs:
       - name: Run staging script
         run: |
           echo "This is a script in staging"
+      - uses: aws-actions/setup-sam@v2
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: 'us-east-1'
+      # sam build
+      - run: sam build --use-container
+      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name tf-pdp-02-app-staging --resolve-s3 --capabilities CAPABILITY_IAM --region us-east-1
 
   prod-build-deploy:
     runs-on: ubuntu-latest
