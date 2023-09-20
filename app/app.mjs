@@ -16,7 +16,7 @@ export const lambdaHandler = async (event, context) => {
         return {
             'statusCode': 200,
             'body': JSON.stringify({
-                message: `You are my sunshine*. You are the ruler of ${process.env.APP_ENV_NAME}!`,
+                message: `You Jhahn, are my sunshine*. You are the ruler of ${process.env.APP_ENV_NAME}!`,
             })
         }
     } catch (err) {
